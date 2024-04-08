@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:tc:postgresql:11.1:///integration-tests-db
+    username: sa
+    password: sa
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 5
+
+sortOrder: asc
+sortBy: price
+pageSize: 10
+page: 0

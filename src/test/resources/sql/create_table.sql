@@ -10,8 +10,8 @@ CREATE TABLE producers (
 );
 
 CREATE TABLE colors (
-                           id SERIAL PRIMARY KEY,
-                           name VARCHAR(255) NOT NULL
+                        id SERIAL PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE models (
@@ -32,8 +32,8 @@ CREATE TABLE phones (
 );
 
 CREATE TABLE phones_colors (
-                        phone_id BIGINT NOT NULL,
-                        color_id BIGINT NOT NULL,
-                        FOREIGN KEY (phone_id) REFERENCES phones(id),
-                        FOREIGN KEY (color_id) REFERENCES colors(id)
+                               phone_id BIGINT NOT NULL,
+                               color_id BIGINT NOT NULL,
+                               FOREIGN KEY (phone_id) REFERENCES phones(id),
+                               FOREIGN KEY (color_id) REFERENCES colors(id)
 );
